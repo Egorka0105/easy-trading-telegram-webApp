@@ -1,0 +1,24 @@
+.copy_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 160px;
+  width: 100%;
+  background-color: var(--black);
+  color: var(--light-blue);
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: .5s ease;
+
+  &:hover {
+    background-color: var(--light-blue);
+    color: var(--black);
+  }
+}
