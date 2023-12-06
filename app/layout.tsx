@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="ru">
 			<Head>
-				<script src="https://telegram.org/js/telegram-web-app.js"></script>
+				<script src="https://telegram.org/js/telegram-web-app.js" async></script>
 				<title>East Trading Web App</title>
 			</Head>
 			<body className={roboto.className}>
