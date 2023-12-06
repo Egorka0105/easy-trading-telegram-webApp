@@ -1,6 +1,5 @@
 'use client';
 
-import s from './index.module.scss';
 import { useSearchParams } from 'next/navigation';
 import { ChangeEvent, useCallback, useState } from 'react';
 import { Loader } from '@/components';
@@ -8,6 +7,7 @@ import { FIELD_NAMES } from '@/utils/enums';
 import axios from 'axios';
 import { wallet_schema } from '@/utils/validations';
 import { FormSent } from '@/components/FormSent';
+import s from './index.module.scss';
 
 export const WalletForm = () => {
 	const [isFormSend, setFormSend] = useState(false);

@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Loader } from '@/components';
-import s from './index.module.scss';
 import { WalletForm } from '@/components/WalletForm';
+import s from './index.module.scss';
 
 export default function Page() {
 	return (
