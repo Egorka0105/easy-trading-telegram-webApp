@@ -1,12 +1,10 @@
-'use client';
-
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import s from './index.module.scss';
 
-export const FormSent = () => {
+export default function Page() {
 	return (
-		<div className={s.form_sent}>
+		<div className={s.farewell}>
 			<div className={s.icon_wrapper}>
 				<Image className={s.icon} src={'/thanks.png'} alt={'thanks'} width={96} height={96} />
 				<span className={s.description}>Спасибо!</span>
@@ -34,4 +32,4 @@ export const FormSent = () => {
 			</Link>
 		</div>
 	);
-};
+}
