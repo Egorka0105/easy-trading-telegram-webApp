@@ -55,12 +55,12 @@ export const WalletForm = () => {
 			{!loading && !isFormSend && (
 				<div className={s.wallet_form}>
 					<h4 className={s.title}>
-						Для вашей идентификации и последующей виплати дохода введите адрес кошелька, с которого ви совершили перевод
+						Для вашей идентификации и последующей выплаты дохода введите адрес кошелька, с которого вы совершили перевод
 						и сумму перевода
 					</h4>
 
 					<div className={s.form}>
-						<label htmlFor={FIELD_NAMES.WALLET}>Кошелек</label>
+						<label className={s.label} htmlFor={FIELD_NAMES.WALLET}>Кошелек</label>
 						<input
 							type={'text'}
 							className={s.input}

@@ -8,10 +8,10 @@ export default function Home() {
 		<div className={s.home}>
 			<div className={s.titles_wrapper}>
 				<p className={s.title}>
-					Отправляйте только <strong>USDT TRC20</strong> на єтот адрес. Другие активи могут не дойти.
+					Отправляйте только <strong>USDT TRC20</strong> на этот адрес. Другие активы могут не дойти.
 				</p>
 				<p className={s.sub_title}>
-					Для отправки используйте QR или номер кошелька. После оплати нажмите подтвердить платеж
+					Для отправки используйте QR или адрес кошелька. После оплаты нажмите подтвердить платеж
 				</p>
 			</div>
 
@@ -27,7 +27,7 @@ export default function Home() {
 
 			<div className={s.wallet_wrapper}>
 				<h4 className={s.title}>Нет кошелька с USDT?</h4>
-				<h5 className={s.description}>Воспользуйтесь telegram wallet и пополните кошелек любим удобним способом</h5>
+				<h5 className={s.description}>Воспользуйтесь telegram wallet и пополните кошелек любым удобным способом</h5>
 				<OpenWalletButton />
 			</div>
 		</div>
