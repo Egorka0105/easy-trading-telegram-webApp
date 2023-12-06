@@ -9,6 +9,7 @@
     --black: #050F1B;
     --light-blue: #1AA6FD;
     --wallet-bg: #1F313F;
+    --gray: #6B7783;
 
 }
 
@@ -44,5 +45,34 @@ button {
     cursor: pointer;
     border: none;
     background: transparent;
+}
+
+input {
+    background: transparent;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.input_error {
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--light-blue);
+    box-shadow: none;
 }
 

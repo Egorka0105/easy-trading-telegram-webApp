@@ -1,0 +1,57 @@
+.wallet_form {
+  max-width: 346px;
+  width: 100%;
+
+  .title {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    padding: 0 8px;
+  }
+}
+
+.form {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 4.5px;
+  background: #1F313F;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  .input {
+    color: var(--white);
+  }
+}
+
+.error {
+  color: #FF3B30;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.submit {
+  margin-top: 16px;
+  max-width: 346px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: 1px solid var(--light-blue);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: ease .5s;
+
+  &:disabled {
+    background-color: var(--gray);
+    color: var(--white);
+    border-color: var(--gray);
+  }
+}

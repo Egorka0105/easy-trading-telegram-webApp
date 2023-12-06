@@ -1,7 +1,8 @@
-export const copyToClipboard = (text: string) => {
+export const copyToClipboard = async (text: string) => {
 	try {
-		console.log('Текст скопійовано до буферу обміну');
+		await navigator.clipboard.writeText(text);
+		await console.log('Текст скопійовано до буферу обміну');
 	} catch (err) {
-		console.error('Не вдалося скопіювати текст до буферу обміну', err);
+		console.error('Не вдалося', err);
 	}
 };

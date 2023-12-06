@@ -1,3 +1,25 @@
 .open_wallet_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 0;
   background-color: var(--wallet-bg);
+  max-width: 346px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+
+  .icon {
+    margin-bottom: 2px;
+  }
+
+  .title {
+    color: var(--white);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+  }
 }
