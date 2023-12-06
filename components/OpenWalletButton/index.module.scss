@@ -1,4 +1,5 @@
 .open_wallet_btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +10,13 @@
   width: 100%;
   margin: 0 auto;
   border-radius: 4px;
+
+  &::after {
+    content: url("/arrow.svg");
+    position: absolute;
+    top: 6px;
+    right: 7px;
+  }
 
   .icon {
     margin-bottom: 2px;
