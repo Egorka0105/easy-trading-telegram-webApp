@@ -6,7 +6,7 @@ export const copyToClipboard = async (text: string, fallback: (text: string) => 
 			await toastMessage('queryCommandSupported - success', 'success');
 		}
 		if (navigator.clipboard) {
-			await window.navigator.clipboard.writeText(text);
+			await navigator.clipboard.writeText(text);
 			await toastMessage('Скопировано', 'success');
 		} else {
 			fallback(text);
@@ -19,7 +19,7 @@ export const copyToClipboard = async (text: string, fallback: (text: string) => 
 	}
 };
 
-// Fallback function for browsers that do not support Clipboard API
+// fallback function for browsers that do not support clipboard
 export const fallbackCopyToClipboard = (text: string) => {
 	const textArea = document.createElement('textarea');
 	textArea.value = text;
@@ -28,7 +28,7 @@ export const fallbackCopyToClipboard = (text: string) => {
 
 	try {
 		document.execCommand('copy');
-		toastMessage('Скопировано', 'success');
+		toastMessage('Скопировано 2', 'success');
 	} catch (e) {
 		toastMessage(
 			'Не удалось скопировать. Возможно, проблема в настройках безопасности на вашем устройстве. Скопируйте ссылку выше вручную.',
