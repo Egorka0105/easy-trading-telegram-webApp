@@ -2,7 +2,7 @@ import { toastMessage } from '@/utils/helpers/toasttify';
 
 export const copyToClipboard = async (text: string) => {
 	try {
-		const permissionStatus = await navigator.permissions.query({ name: 'clipboard-write' } as any);
+		const permissionStatus = await navigator.permissions.query({ name: 'notifications' });
 		console.log('permissionStatus', permissionStatus);
 		if (permissionStatus.state === 'granted' || permissionStatus.state === 'prompt') {
 			await window.navigator.clipboard.writeText(text);
