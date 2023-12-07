@@ -3,15 +3,13 @@
 import s from './index.module.scss';
 import { useEffect } from 'react';
 
-const tg = Telegram.WebApp;
-
 export const CloseWebAppButton = () => {
 	useEffect(() => {
-		tg.ready();
+		Telegram.WebApp.ready();
 	}, []);
 
 	const handleClose = (): void => {
-		tg.close();
+		Telegram.WebApp.close();
 	};
 
 	return (

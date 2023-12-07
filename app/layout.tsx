@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={roboto.className}>
 				<main>{children}</main>
 				<ToastContainer />
-			<Script src={"https://telegram.org/js/telegram-web-app.js"} async/>
+			<Script src={"https://telegram.org/js/telegram-web-app.js"}/>
 			</body>
 		</html>
 	);
