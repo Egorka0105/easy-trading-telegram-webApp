@@ -37,7 +37,6 @@ export const WalletForm = () => {
 			if (status === 200) router.push('/farewell');
 		} catch (e: any) {
 			await toastMessage(e.message, 'error');
-		} finally {
 			setLoading(false);
 		}
 	};
