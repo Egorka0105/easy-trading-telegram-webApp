@@ -5,7 +5,7 @@ import s from './index.module.scss';
 export const CloseWebAppButton = () => {
 	const handleClose = (): void => {
 		// @ts-ignore
-		if (window) window.Telegram.WebApp.close();
+		document.Telegram.WebApp.close();
 	};
 
 	return (
