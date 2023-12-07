@@ -1,7 +1,7 @@
 'use client';
 
 import s from './index.module.scss';
-import {useEffect} from "react";
+import { useEffect } from 'react';
 
 // Объявление глобальной переменной Telegram
 declare global {
@@ -10,17 +10,18 @@ declare global {
 			WebApp: {
 				close: () => void;
 			};
-
 		};
 	}
 }
 
 export const CloseWebAppButton = () => {
-
-	const handleClose = (): void => {
-		alert(window.Telegram);
-		alert(window.Telegram.WebApp);
-		window.Telegram.WebApp.close();
+	const handleClose = (e: any): void => {
+		alert(e.view.Telegram.WebApp);
+		if (window.Telegram.WebApp) {
+			e.view.Telegram.WebApp.close();
+		} else {
+			alert(window.Telegram);
+		}
 	};
 
 	return (
