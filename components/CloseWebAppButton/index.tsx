@@ -3,25 +3,15 @@
 import s from './index.module.scss';
 import { useEffect } from 'react';
 
-// Объявление глобальной переменной Telegram
-declare global {
-	interface Window {
-		Telegram: {
-			WebApp: {
-				close: () => void;
-			};
-		};
-	}
-}
+const tg = Telegram.WebApp;
 
 export const CloseWebAppButton = () => {
-	const handleClose = (e: any): void => {
-		alert(e.view.Telegram.WebApp);
-		if (window.Telegram.WebApp) {
-			e.view.Telegram.WebApp.close();
-		} else {
-			alert(window.Telegram);
-		}
+	useEffect(() => {
+		tg.ready();
+	}, []);
+
+	const handleClose = (): void => {
+		tg.close();
 	};
 
 	return (

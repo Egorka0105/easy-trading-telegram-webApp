@@ -1,7 +1,8 @@
+import { CloseWebAppButton } from '@/components/CloseWebAppButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import s from './index.module.scss';
-import { CloseWebAppButton } from '@/components/CloseWebAppButton';
+
 
 export default function Page() {
 	return (
