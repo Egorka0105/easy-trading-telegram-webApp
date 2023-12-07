@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ConfirmDepositButton, OpenWalletButton } from '@/components';
-import s from './page.module.scss';
 import { CopyButton } from '@/components/CopyButton';
+import s from './index.module.scss';
 
 export default function Home() {
 	return (

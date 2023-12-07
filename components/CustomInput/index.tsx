@@ -13,7 +13,7 @@ interface ICustomInput {
 }
 
 export const CustomInput: FC<ICustomInput> = ({ label, placeholder, field_Id, field_Name, type = 'text', ...rest }) => {
-	const { values, errors, setFieldValue }: FormikContextType<any> = useFormikContext();
+	const { errors, setFieldValue }: FormikContextType<any> = useFormikContext();
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setFieldValue(field_Name, e.target.value);
@@ -35,7 +35,7 @@ export const CustomInput: FC<ICustomInput> = ({ label, placeholder, field_Id, fi
 					autoComplete="off"
 				/>
 			</div>
-			{errors && <span className={s.error}>{errors[field_Name] as string}</span>}
+			{errors[field_Name] && <span className={s.error}>{errors[field_Name] as string}</span>}
 		</div>
 	);
 };

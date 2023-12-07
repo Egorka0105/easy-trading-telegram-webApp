@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
-import './globals.css';
 import Script from "next/script";
-
+import 'styles/globals.css';
+import 'styles/constants.css';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'] });
 

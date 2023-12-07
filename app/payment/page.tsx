@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Loader } from '@/components';
 import { WalletForm } from '@/components/WalletForm';
+import { GoBackButton } from '@/components/GoBackButton';
 import s from './index.module.scss';
 
 export default function Page() {
@@ -13,6 +14,7 @@ export default function Page() {
 			<Suspense fallback={<Loader />}>
 				<WalletForm />
 			</Suspense>
+			<GoBackButton />
 		</div>
 	);
 }
