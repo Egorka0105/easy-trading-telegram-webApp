@@ -18,6 +18,8 @@ declare global {
 export const CloseWebAppButton = () => {
 
 	const handleClose = (): void => {
+		alert(window.Telegram);
+		alert(window.Telegram.WebApp);
 		window.Telegram.WebApp.close();
 	};
 
