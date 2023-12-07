@@ -1,11 +1,24 @@
 'use client';
 
 import s from './index.module.scss';
+import {useEffect} from "react";
+
+// Объявление глобальной переменной Telegram
+declare global {
+	interface Window {
+		Telegram: {
+			WebApp: {
+				close: () => void;
+			};
+
+		};
+	}
+}
 
 export const CloseWebAppButton = () => {
+
 	const handleClose = (): void => {
-		// @ts-ignore
-		document.Telegram.WebApp.close();
+		window.Telegram.WebApp.close();
 	};
 
 	return (

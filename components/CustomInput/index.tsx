@@ -16,7 +16,6 @@ export const CustomInput: FC<ICustomInput> = ({ label, placeholder, field_Id, fi
 	const { values, errors, setFieldValue }: FormikContextType<any> = useFormikContext();
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		console.log(e.target.value, values);
 		setFieldValue(field_Name, e.target.value);
 	};
 
