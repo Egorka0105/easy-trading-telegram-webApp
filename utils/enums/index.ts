@@ -4,3 +4,7 @@ export enum FIELD_NAMES {
 	USER_ID = 'userId',
 	DEAL_ID = 'dealId',
 }
+
+export enum API_ENDPOINTS {
+ DIRECT_DEPOSIT = "/deposit/direct-deposit"
+}

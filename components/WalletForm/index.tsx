@@ -3,13 +3,12 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { Loader } from '@/components';
-import { FIELD_NAMES } from '@/utils/enums';
-import axios from 'axios';
+import { API_ENDPOINTS, FIELD_NAMES } from '@/utils/enums';
 import { wallet_schema } from '@/utils/validations';
 import { Form, Formik } from 'formik';
 import { CustomInput } from '@/components/CustomInput';
 import { initValues_walletForm } from '@/utils/variables';
-import { toastMessage } from '@/utils/helpers/toasttify';
+import { fetchFormSubmitData } from '@/utils/helpers';
 import s from './index.module.scss';
 
 export const WalletForm = () => {
@@ -22,21 +21,18 @@ export const WalletForm = () => {
 	const dealId = params.get('dealId');
 
 	const handleSubmit = async (values: any) => {
+		setLoading(true);
 		const reqValue = {
 			[FIELD_NAMES.WALLET_ADDRESS]: values[FIELD_NAMES.WALLET_ADDRESS],
 			[FIELD_NAMES.WALLET_AMOUNT]: values[FIELD_NAMES.WALLET_AMOUNT],
 			[FIELD_NAMES.USER_ID]: userId,
 			[FIELD_NAMES.DEAL_ID]: dealId,
 		};
-		setLoading(true);
+
 		try {
-			const { status } = await axios.post(
-				`https://crypto-bot-npm5.onrender.com/easytrading-bot/deposit/direct-deposit`,
-				reqValue
-			);
-			if (status === 200) router.push('/farewell');
+			const res = await fetchFormSubmitData(API_ENDPOINTS.DIRECT_DEPOSIT, reqValue);
+			if (res?.status === 200) router.push('/farewell');
 		} catch (e: any) {
-			await toastMessage(e.message, 'error');
 			setLoading(false);
 		}
 	};
