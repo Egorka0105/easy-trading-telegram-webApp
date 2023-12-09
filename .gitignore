@@ -30,8 +30,6 @@ yarn.lock
 
 # local env files
 .env*.local
-.env.development
-.env.production
 
 # vercel
 .vercel
@@ -39,3 +37,6 @@ yarn.lock
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.env.development
+.env.production
